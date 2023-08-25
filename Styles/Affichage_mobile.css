@@ -1,0 +1,95 @@
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header:nth-child(1) {
+    flex: 1;
+    order: 2;
+}
+
+header:nth-child(2) {
+    flex: 2;
+    order: 1;
+}
+
+header:nth-child(3) {
+    flex: 1;
+    order: 3;
+}
+
+.menu {
+    height: 100%;
+    width: 100%;
+    margin-top: -8%;
+    right: -120%;
+    border-radius: 5px 0px 0px 5px;
+    position:fixed;
+    background-color: rgba(0, 0, 0, 0.452);
+    backdrop-filter: blur(5px);
+    z-index: 3;
+    transition: 500ms ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+}
+
+
+#closeMenu {
+    display: block;
+    top: 5px;
+    left: 50px;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    position: absolute;
+    font-size: 30px;
+}
+
+#closeMenu :hover {
+    color: rgb(18, 35, 79);
+}
+
+#openMenu {
+    display: block;
+    margin: 5px;
+    left: 5px;
+    top: 25%;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    float: right;
+    position: absolute;
+    font-size: 30px;
+}
+
+#openMenu :hover {
+    color: rgb(18, 35, 79);
+}
+
+
+.active_menu {
+    right: 0px;
+    transition: 500ms ease-in-out;
+}
+
+nav li a::after {
+    height: 5px;
+    background-color: white;
+}
+
+
+#menu li {
+    margin-bottom: 20px;
+}
+
+#menu li a {
+    color: white;
+    font-size: large;
+}
+
+.connect_info {
+    position: absolute;
+    right: 5px;
+}
+/*Banierre*/
