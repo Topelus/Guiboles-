@@ -1,12 +1,116 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ma Première Page Web</title>
+    <link rel="stylesheet" href="Styl.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    
+    <title>Catalogue</title>
 </head>
 <body>
-    <h1>Bienvenue sur ma première page web</h1>
-    <p>Ceci est un exemple de page HTML simple avec un titre en h1.</p>
+    <div class="en-tete">
+        <header class="flex padding" >
+            <h3>Gourmet au catering</h3>
+
+            <div class="right">
+              <a class="line" href="#about">About</a>
+              <a class="line" href="#menu">Menu</a>
+              <a class="line" href="#contact">Contact</a> 
+            </div>  
+        </header>
+    </div>
+
+    <div>
+        <div class="background">
+            <div class="position">
+                Le catering
+            </div>
+        </div>
+    </div>
+
+    <section class="d-flex">
+        <div class="col" >
+            <img src="tablesetting2.jpg" alt="">
+        </div>
+        <div class="col">
+            <h1 class="center">About Catering</h1> 
+            <h4 class="center">Traditional since 1889</h4>
+            <p >
+                The Catering was founded in blabla by Mr.Smith in lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                aute iruredolor in reprehenderit involuptate velit esse cillum dolore eu fugiatnulla pariatur.We only use seasonalingredients.
+            </p>
+            <p >
+                The Catering was founded in blabla by Mr.Smith in lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                aute iruredolor in reprehenderit involuptate velit esse cillum dolore eu fugiatnulla pariatur.We only use seasonalingredients.
+            </p>
+        </div>
+        
+    </section>
+
+    <section class="d-flex">
+        <div class="col">    
+            <h2>OUR MENU</h2>
+            <h4>Bread Basket</h4>
+            <P>Assortment of fresh baked fruit breads and muffins 5.50</P> 
+            <h4>Honey Almonld Granola with fruits</h4> 
+            <P>Natural cereal of honey toasted oats, raisins, almonds and dates 7.00</P>
+            <h4>Belgian wafle</h4> 
+            <P>Vanilla flavored batter with malted flour 7.50</P>
+            <h4>Scranbled eggs</h4>
+            <P> Scrambled eggs, roasted red pepper and garlic, with green onions 7.50</P>
+            <h4>Blue Berry Pancake</h4> 
+            <P>With syrup, butter and lots of berries 8.5</P> 
+        </div>
+        <div class="col lo">
+            <img class="image" src="tablesetting.jpg" alt="">
+        </div>
+    </section>
+
+    <section>
+        <div class="bloc3">
+            <h1>Contact</h1>
+             <p>We offer full­service catering for any event, large or small. We understand your needs and we will cater the
+                food to satisfy the biggerst criteria of them all, both look and taste. Do not hesitate to contact us.
+             </p>
+             <p class="color">
+                Catering Service, 42nd Living St, 43043 New York, NY
+             </p>
+             <p>
+                You can also contact us by phone 00553123­2323 or email catering@catering.com, or you can send us a
+                message here:
+             </p>
+        </div>
+        
+        <form action="traitement.php">
+            <p>
+                <input type="text" placeholder="Name">
+            </p>
+
+            <p>
+                <input type="number" placeholder="How many people">
+            </p>
+            <p>
+                <input type="date time" placeholder="11/16/2020 08:00 PM ">
+            </p>
+            <p>
+                <input type="text" placeholder="Message \ Special requirements">
+            </p>
+             <P>
+                 <input class="send" type="submit" value="SEND MESSAGE">
+             </P>
+        </form>
+    </section>
+
+    <footer>
+        <p class="foot">
+            Powered by <span class="line">w3.CSS</span> 
+        </p>
+    </footer>
 </body>
 </html>
