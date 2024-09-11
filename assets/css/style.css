@@ -9,7 +9,7 @@ body {
 }
 
 * {
-    font-family: 'Poppins', Courier, Courier, monospace;
+    font-family: 'Poppins', Arial, sans-serif, Courier, monospace;
     margin: 0;
 }
 
@@ -24,11 +24,12 @@ header {
     position: relative;
     background-image: url("../images/bannpic.webp");
     background-attachment: fixed;
+    background-position:center ;
     background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
-    filter: brightness(55%);
+    filter: brightness(80%);
 }
 
 .parralax-header::after {
@@ -55,6 +56,11 @@ header {
 .scrolled .logo-stride,
 .scrolled .moove_menu li a {
     color: black;
+    transition: 500ms ease-in;
+}
+
+.scrolled .moove_menu li a:hover {
+    color: rgb(187, 109, 1);
     transition: 500ms ease-in;
 }
 
@@ -103,18 +109,26 @@ header {
     height: 8em;
     box-sizing: border-box;
     padding: 0px 30px;
+    border-bottom: 2px rgb(187, 109, 1) solid;
+}
+
+.scrolled .main-navbar {
     border-bottom: 2px rgb(255, 255, 255) solid;
 }
 
 .logo-stride {
     font-size: 5vw;
     font-weight: bold;
-    color: white;
+    color: rgb(187, 109, 1);
     transition: 500ms ease-in;
 }
 
 .menu {
     width: 65%;
+}
+
+.menu .openMenu {
+    display: none;
 }
 
 .menu .moove_menu {
@@ -134,11 +148,13 @@ header {
 }
 
 .moove_menu li a {
-    font-size: 1.2em;
+    font-size: 1.15em;
+    font-weight: 500;
+    color: rgb(187, 109, 1);
 }
 
 .moove_menu li:hover a {
-    color: rgb(187, 109, 1);
+    color: rgb(255, 255, 255);
 }
 
 .moove_menu div {
@@ -192,19 +208,18 @@ header {
 }
 
 .presentation p {
-    font-size: 1.5vw;
+    font-size: 1.7vw;
     text-align: justify;
 }
 
 .presentation .pretext {
     display: flex;
-    margin: 0px 200px;
+    margin: 0px 100px;
     box-sizing: border-box;
 }
 
 .presentation .pretext article {
     margin-right: 50px;
-    height: 100px;
 }
 
 .presentation .pretext aside {
@@ -213,9 +228,8 @@ header {
     height: 350px;
     background-image: url('../images/15177.jpg');
     background-size: 480px;
-    ;
     background-position: bottom;
-    position: relative;
+    
     top: -100px;
     flex-shrink: 0;
     filter: brightness(70%) contrast(120%);
@@ -274,6 +288,7 @@ header {
     border-radius: 5px;
     background-color: rgb(187, 109, 1);
     transition: 500ms ease-in-out;
+    border: none;
 }
 
 .presentation button a {
@@ -319,13 +334,12 @@ header {
 }
 
 .about .pretext aside {
-
-    width: 300px;
-    height: 300px;
+    width: 70%;
+    min-width: 300px;
+    height: 100%;
     background-image: url('../images/pexels-thirdman-5060979.jpg');
     background-size: cover;
     position: relative;
-    bottom: -100px;
     flex-shrink: 0;
     filter: brightness(70%) contrast(120%);
 }
@@ -601,7 +615,6 @@ header {
 /* footer */
 footer {
     width: 100%;
-    height: 400px;
     background-image: linear-gradient(rgba(0, 7, 32, 0.8), rgb(0, 7, 32, 0.8)), url(../images/pexels-weekendplayer-1098982.webp);
     background-size: cover;
     background-position: bottom;
@@ -626,6 +639,7 @@ footer .foot {
     padding: 0px 80px;
     margin-top: 30px;
     gap: 40px;
+    flex-wrap: wrap;
 }
 
 footer .foot>div {
@@ -706,28 +720,169 @@ footer .copyright {
 }
 
 @media (max-width:1036px) {
+    .presentation .pretext {
+        margin: 0px 20px;
+    }
+
+    .presentation h1 {
+        font-size: 1.7em;
+    }
+
+    .presentation p {
+        font-size: 1.5em;
+    }
+
+    .menu {
+        position: relative;
+    }
+
+    .menu .openMenu {
+        width: 40px;
+        height: 40px;
+        border: 1px rgb(187, 109, 1) solid;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 5px;
+        position: absolute;
+        right: 10px;
+        top: -20px;
+        transition: 500ms ease-in-out;
+    }
+    .scrolled {
+        transform: translateY(0px);
+    }
+
+    .scrolled .menu .openMenu {
+        border: 1px black solid;
+        transition: 500ms ease-in-out;
+    }
+    .scrolled .menu .openMenu span{
+        background-color: black;
+        transition: 500ms ease-in-out;
+    }
+
+    .menu .openMenu span {
+        height: 6px;
+        width: 30px;
+        background-color: rgb(187, 109, 1);
+        border-radius: 4px;
+        transition: 500ms ease-in-out;
+    }
+    .menu .openMenu:hover{
+        background-color: white;
+    }
+
+    .menu .openMenu span:nth-child(1) {
+        width: 20px;
+        align-self: flex-start;
+        margin-left: 5px;
+    }
+
+    .menu .openMenu span:nth-child(3) {
+        width: 20px;
+        align-self: flex-end;
+        margin-right: 5px;
+    }
+
+
+    .about .container {
+        margin: 20px 20px;
+    }
+
+    footer .foot {
+        padding: 0px 20px;
+    }
+
     header .top-navbar {
         display: none;
     }
 
+
     .menu .moove_menu {
         position: absolute;
-        display: block;
-        width: 50%;
-        height: 100%;
+        top: 8em;
         right: 0;
+        width: 50%;
+        height: 110vh;
+        right: 0;
+        background-color: rgba(187, 109, 1, 0.5);
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        box-sizing: border-box;
+        padding: 30px;
+        backdrop-filter: blur(10px);
     }
 
     .moove_menu ul {
-        display: block;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 0;
+        align-items: center;
+        height: 300px;
+        padding: 0;
+        margin-top: 50px;
     }
 
-    .moove_menu div {
-        background-color: rgb(187, 109, 1);
-        border: 2px rgb(187, 109, 1) solid;
-        padding: 8px 15px;
-        border-radius: 10px;
+    .moove_menu ul li {
+        margin: 0;
+    }
+
+    .menu .moove_menu div {
+        background-color: rgba(255, 255, 255, 0);
+        border: none;
+        padding: 0px;
+        border-radius: none;
         transition: 500ms ease-in-out;
+        display: none;
+    }
+
+    .moove_menu ul a {
+        color: white;
+        text-align: center;
+    }
+
+}
+@media (max-width:900px) {
+    .presentation .pretext {
+        flex-direction: column;
+        align-items: center;
+    }
+    .presentation .pretext article{
+        margin: 0px;
+    }
+    .presentation .pretext aside{
+        top: auto;
+    }
+    .about .container {
+        margin: 0px 0px;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .about .container aside{
+        width: 100%;
+        height: 500px;
+        margin-bottom: 20px;
+    }
+
+    .callToAtion p{
+        font-size: 3.1em;
+    }
+    .contact{
+        flex-direction: column;
+    }
+    .contact .img-contact,.contact .contact-form{
+        width: 100%;
+    }
+    .about .pretext {
+        width: 100%;
+    }
+    .about .links-about{
+        width: 100%;
     }
 
 }
