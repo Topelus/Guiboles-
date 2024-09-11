@@ -653,7 +653,6 @@ footer .foot>div {
 footer .foot .follow-us>div {
     gap: 30px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 
@@ -856,6 +855,13 @@ footer .copyright {
     .presentation .pretext aside{
         top: auto;
     }
+    .presentation .interventions{
+        flex-direction: column;
+        gap: 50px;
+    }
+    .presentation .interventions>div {
+        justify-content: space-between;
+    }
     .about .container {
         margin: 0px 0px;
         flex-direction: column;
@@ -881,8 +887,13 @@ footer .copyright {
     .about .pretext {
         width: 100%;
     }
-    .about .links-about{
+
+    footer .foot {
+        align-items: center;
+        flex-direction: column;
+        gap: 30px;
+    }
+    footer .foot>div{
         width: 100%;
     }
-
 }
