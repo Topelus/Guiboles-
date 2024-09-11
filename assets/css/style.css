@@ -874,6 +874,9 @@ footer .copyright {
         height: 500px;
         margin-bottom: 20px;
     }
+        .about .links-about{
+        width: 90%;
+    }
 
     .callToAtion p{
         font-size: 3.1em;
